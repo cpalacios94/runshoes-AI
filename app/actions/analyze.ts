@@ -3,9 +3,9 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
 // Inicializamos el cliente
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '')
 
 export async function analyzeShoes(imagesBase64: string[]) {
+  const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '')
   try {
     // Usamos el modelo 'gemini-1.5-flash' que es rápido y barato/gratis
     // Configuramos 'responseMimeType' para asegurar que devuelva JSON
